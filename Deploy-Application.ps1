@@ -67,13 +67,13 @@ Try {
 	## Variables: Application
 	[string]$appVendor = ''
 	[string]$appName = 'Notepad ++'
-	[string]$appVersion = '8.4.2'
+	[string]$appVersion = '8.5'
 	[string]$appArch = 'x64'
 	[string]$appLang = 'EN'
 	[string]$appRevision = '01'
 	[string]$appScriptVersion = '1.0.0'
-	[string]$appScriptDate = '06/013/202'
-	[string]$appScriptAuthor = '<Ryan McKenna>'
+	[string]$appScriptDate = '03/014/2023'
+	[string]$appScriptAuthor = '<Sebastian Bickford>'
 	##*===============================================
 	## Variables: Install Titles (Only set here to override defaults set by the toolkit)
 	[string]$installName = ''
@@ -141,7 +141,7 @@ Try {
 		}
 
 		## <Perform Installation tasks here>
-		$exitCode = Execute-Process -Path "npp.8.4.2.Installer.x64.exe" /S -WindowStyle 'Hidden'
+		$exitCode = Execute-Process -Path "$dirFiles\npp.8.5.Installer.x64.exe" /S -WindowStyle 'Hidden'
 		If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 
 
@@ -249,8 +249,8 @@ Catch {
 # SIG # Begin signature block
 # MIImVgYJKoZIhvcNAQcCoIImRzCCJkMCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCDIUf8VH5XlbNuu
-# AfU9Gr+bPFLGJYAiKek6ab09aGozqqCCH8EwggVvMIIEV6ADAgECAhBI/JO0YFWU
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCCxd9qN7U+QF8XV
+# clU714BuS0CPJUqzxz8AMYsuUANhJ6CCH8EwggVvMIIEV6ADAgECAhBI/JO0YFWU
 # jTanyYqJ1pQWMA0GCSqGSIb3DQEBDAUAMHsxCzAJBgNVBAYTAkdCMRswGQYDVQQI
 # DBJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcMB1NhbGZvcmQxGjAYBgNVBAoM
 # EUNvbW9kbyBDQSBMaW1pdGVkMSEwHwYDVQQDDBhBQUEgQ2VydGlmaWNhdGUgU2Vy
@@ -424,32 +424,32 @@ Catch {
 # ZDErMCkGA1UEAxMiU2VjdGlnbyBQdWJsaWMgQ29kZSBTaWduaW5nIENBIFIzNgIR
 # AKVN33D73PFMVIK48rFyyjEwDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIB
 # DDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEE
-# AYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgCXjp7FqAf7t8
-# AXbAEDMaSEOZXpRHfRpXjLPqhF/P0mAwDQYJKoZIhvcNAQEBBQAEggGAP9HF2uvu
-# FI61dhFqJlBHXZpSIA/Bz75rcS+K8FrddGWU2EahcLjv+aQzjhMx8vwmXmBQFC7T
-# idt7mEV5s0964EyZNQ/DmjQGMmu1pHkN+ZoNv8OcwTb/BW/Ki+wfYcGioq+gAEtq
-# lXBuK6giFOU8Vj8HIgIVLcKrz+uAslVgQy2P6w5uoJsocG6f/d1jrVrhKsyIFvtG
-# iCPs8EmWClqpj4pmgIdWivH+vcoKbRx/VppCFLyJ06cY8AoUD0R/DqsjH5qsqILS
-# AKa/39K1mERPdebMYfEIYbGv1lEHfBS6MnPZQ1ym/vFiy0oiA15z07KqyxZY6ALV
-# Ok6Ik21DD+LxTXUjLdi4DT4P4AEWoU2m0r8QSNx3/HN5IFIXkp1ES0xGaRJXyGzq
-# GvWY0ZmrytGFWm8k2Vpovw/mRRjpqZK9Y4MANPdaHOJ+O09qdU+ZaEMf/g3aLpUA
-# 8J+6tQNZTEcIqJpAJXOISeSGWN167uqDuLLPy7gpkCyKipYqoSJ++2qHoYIDTDCC
+# AYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgLTIkkntHhbFW
+# Q8hhvH/5SEHlVZEdHVfYJGmhYH6wrjowDQYJKoZIhvcNAQEBBQAEggGAn2/yg6Nl
+# vPyI0GNJr6dxFnlNUS9vArXXCCCIjPkbLxOujd8s38LA/Y/WiFBOz49LB+XxXcw+
+# 7BWppNo4YLy/Qv5NTyskpdHSZrCohEqJVXradGktjq8ybF5EZw7ng37gk+fFHKkS
+# 2ZbA4KM9PuwWJs4/2XfIWsGZW9jrrhYCSJq1VKNwxdhUZzZyCxN8VIG+GP0Jl3oo
+# x332S7WlUXHW8Si9/ZhuUPp0FZRnjrkY81nk30FgW5y3KD8jFP2mYUP/t+XhF2dN
+# 6smr0BvVPW8oUFoSINuIz2ggTG0lX0qXf8ruIXtpqvEihBVDzhJueRrpuF82kvOW
+# YZe85U0LSL1EVTdfHgKXfn7c3ZHwFNfpWSysFshLSjqoVHlvhaJaBRx4M2eSbTdO
+# qstqWdLy2Sh+alWE9cyxhO+Xq+j6qGkjcz4dJgBgzwY5RpbSIEOGD2RuFCcgyJ6Z
+# axa3TmclKGKZn/WoAAaJF8iVW91v9E3xa20QO0w+j8y4LIloCsdaK+fioYIDTDCC
 # A0gGCSqGSIb3DQEJBjGCAzkwggM1AgEBMIGSMH0xCzAJBgNVBAYTAkdCMRswGQYD
 # VQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGDAWBgNV
 # BAoTD1NlY3RpZ28gTGltaXRlZDElMCMGA1UEAxMcU2VjdGlnbyBSU0EgVGltZSBT
 # dGFtcGluZyBDQQIRAJA5f5rSSjoT8r2RXwg4qUMwDQYJYIZIAWUDBAICBQCgeTAY
-# BgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMjA2MTMx
-# ODE0NDVaMD8GCSqGSIb3DQEJBDEyBDDPR+Dqb8ZdLK+fZedmoowQoxnPbKcs0j++
-# Cqe71fSMwZtqZzw1tz5fzG/kRmFAu8YwDQYJKoZIhvcNAQEBBQAEggIAhY75y1Bz
-# 0UiHsvGrfBY3QhgeX9KfuUtKRuqI2s0NzqWeuom2LnByVyTZlEv5x2ST26e7jren
-# /5iP9QMUu+pqfcPyrtVIZUz40VpSlvCfdf2RgxWrHWcRcYb2uBZLHASAgW9SdQXC
-# 5XOXR8Nb05+70C0+zIBIp1XZu5hqqjgsTjVHV+dNMbwOXXBXDxRbXfLm6nfD7DA7
-# jxbQOh0ZrjIXguhSW+Mz77xGRynp6Esu6ggGvh6n4qbwNkBSxRKNWYOXcWokFIgX
-# SfyqEEDRZvoS4Ck/USv7dliHNJuso0PrsE1V6w5x0seXLiP8qDJeAfGW+vbXOt45
-# v4RKJANvoNNQ/X0BsdVXRnfRO2Oro+IWKsJucdxDtjH/XAXVzi5w47QRNbE7bJHY
-# oWNPyD062AUSwEdLpBO2834z/Ar5DfY5w1E/ulQoZF7rfrktWYeQQTdgl1HJUN+w
-# hUIPXTj+SEbExifYaA7jsvdk0FY+BZKGCpZj5BTBOfGP56qGfVEUL9kxFWTSHQ1H
-# Ykqj1aMFV6M61+cZEzFBf3vRSm5hMp9gUdvQBQTfH349pJwgNLy+78Fif0JlpUVH
-# IQX9NFgd0n4EagAUAhrpXKcw2RAsnDO85ZOIW8FwZJ22Qljg46Quyp+hfIL5NAYG
-# PYgpnHnI7L72lAPJkNlZYjp4fc3W1UZIoY4=
+# BgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMzAzMTQy
+# MTQzMTFaMD8GCSqGSIb3DQEJBDEyBDDMy94HMS8+9YygCiubA904D2PWdRtQErRA
+# CZsg6i7bG/K6VqBcEjcmID1CaBR8LWswDQYJKoZIhvcNAQEBBQAEggIAJcNn8K83
+# y9Dv5GL19u2/LzhJM1APt/TyOk5F6TZaqSWqRyBh44HaMHrq/nhf3lefM5HtbZxE
+# AaBHypx3P+duy0I9PDOUb+Rnsrv0uPM4FdnbyzCg9EIKQ5/1J1nmFXGVMzJtY1oq
+# pJxUDUeaOiqTjiiQWRDmNf4dxMo/Vj0WSLhpy6sRP9n7uM0EEmIlK5ug5Uut3X6m
+# cvYWAyZmS5/+DZ2Hbd32JwEoiWOo2xcBbdpi5Z8ceXmkjImjFyB//9SyoW7ojP3F
+# wat8UnX7mNtDYsSakd2enF19RKQmVE7nVCzeV4UFLgXzH2dXaMnHm6co6jmQP2KD
+# kZjZE/bpbFO1FwNuVc6XSfPKiqw8Q5Yb/6sUiZcRJA/n8HzaqomNjs+jPUNvNsvH
+# Ft4jvbiKAtn7TBjLNzKVjYoMAYHb4+s5RYiptEuVrBI8InOwd/+bdD5L/R5nMyE0
+# dmCWiffDM7PgIjHyAPee5nPSrBsRusfj9S2oywtc9XD3IT/xorkSyrA20JxHR6fS
+# y9hg/UuY1inumK/C7PjpLSrVti+dWxddkGh9ATdBdfpqVKUacciAxSGNQJ0R8An7
+# KeopudntU5GAywcz4+Zxl7tFq3rjovlEwd/sCtbXFNJZEhUy/w8yd6xdi45AAVUc
+# hnDjGZL33DFczRiGtcPioKVVr8pPuRINtbc=
 # SIG # End signature block
